@@ -3,31 +3,28 @@ title: 'Introduction'
 description: 'Example section for showcasing API endpoints'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
-
-## Welcome
-
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
-
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+Welcome to the Creable API documentation! This API provides various endpoints to pull various data points from Creable.
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Authentication for the Creable API is done using an API key provided in the `X-Api-Key` header of your HTTP requests.
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+### Obtaining an API Key
+
+To access the API, you need to obtain an API key by requesting API access to Creable. Once we approve your request, you'll receive an API key unique to your account.
+
+### Including the API Key
+
+You should include your API key in the `X-Api-Key` header of all your API requests. Without a valid API key, you won't be able to access our services.
+
+#### Example
+
+```http
+GET /example HTTP/1.1
+Host: https://api.creable.com/api/v1/endpoint
+X-Api-Key: your-api-key-here
 ```
+
+### Security
+
+We take security seriously. Never share your API key with anyone, and make sure to store it securely. If you suspect your API key has been compromised, you can regenerate it from your account settings.

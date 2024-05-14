@@ -16,7 +16,16 @@
   "anchors": [],
   "navigation": [
     {
-      "group": "References",
+      "group": "API Documentation",
+      "pages": [
+        "api-reference/introduction",
+        "api-reference/endpoint/reports/get",
+        "api-reference/endpoint/limits/get",
+        "api-reference/endpoint/history/reports/get"
+      ]
+    },
+    {
+      "group": "Miscellaneous",
       "pages": ["available-data-points"]
     }
   ],
